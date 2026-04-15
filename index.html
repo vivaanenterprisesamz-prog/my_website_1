@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SellerQ - Amazon Account Management Services</title>
-    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap)" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -405,7 +405,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('[images.unsplash.com](https://images.unsplash.com/photo-1557821552-17105176677c?w=1920)') center/cover;
+            background: url('https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1920') center/cover;
             opacity: 0.05;
         }
 
@@ -755,7 +755,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('[images.unsplash.com](https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920)') center/cover;
+            background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1920') center/cover;
             opacity: 0.1;
         }
 
@@ -1207,6 +1207,46 @@
         .animate {
             animation: fadeInUp 0.6s ease forwards;
         }
+
+	.whatsapp-float{
+		position:fixed;
+		bottom: 100px;
+		right:25px;
+		background:#25D366;
+		width:60px;
+		height:60px;
+		border-radius:50%;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		box-shadow:0 10px 25px rgba(0,0,0,0.25);
+		z-index:9999;
+	}
+	@media (max-width:768px){
+	    .whatsapp-float{
+    	    display:none;
+	    }
+	}
+	.mobile-cta {
+	    display: none;
+	}
+
+	@media (max-width: 768px) {
+	    .mobile-cta {
+	        display: block;
+	        position: fixed;
+	        bottom: 0;
+	        left: 0;
+	        right: 0;
+	        background: linear-gradient(135deg, #FF9900, #FF6A00);
+	        color: white;
+	        text-align: center;
+	        padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+	        font-weight: 600;
+ 	       text-decoration: none;
+	        z-index: 9998;
+	    }
+	}
     </style>
 </head>
 <body>
@@ -1261,7 +1301,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="[images.unsplash.com](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80)" alt="Amazon Business Analytics Dashboard">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200" alt="Amazon Business Analytics Dashboard">
                 <div class="hero-stats">
                     <div class="stat-card glass-white">
                         <h3>100+</h3>
@@ -1395,7 +1435,7 @@
         <div class="section-container">
             <div class="serve-content">
                 <div class="serve-image">
-                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80)" alt="Business Team Collaboration">
+                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200" alt="Business Team Collaboration">
                 </div>
                 <div class="serve-text">
                     <h2>Who We Serve</h2>
@@ -1513,7 +1553,7 @@
                     </a>
                 </div>
                 <div class="about-image">
-                    <img src="[images.unsplash.com](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80)" alt="SellerQ Team">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200" alt="SellerQ Team">
                 </div>
             </div>
         </div>
@@ -1539,28 +1579,33 @@
                 </div>
             </div>
             <div class="contact-form glass-dark">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company / Brand Name</label>
-                        <input type="text" id="company" name="company" placeholder="Enter your company name">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell us about your Amazon business</label>
-                        <textarea id="message" name="message" placeholder="Describe your current Amazon presence and growth objectives..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary submit-btn">
-                        Request a Consultation
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
-                </form>
+
+		    <div class="form-group">
+		        <label for="name">Your Name</label>
+		        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+		    </div>
+
+		    <div class="form-group">
+		        <label for="email">Email Address</label>
+		        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+		    </div>
+
+		    <div class="form-group">
+		        <label for="company">Company / Brand Name</label>
+		        <input type="text" id="company" name="company" placeholder="Enter your company name">
+		    </div>
+
+		    <div class="form-group">
+		        <label for="message">Tell us about your Amazon business</label>
+		        <textarea id="message" name="message" placeholder="Describe your business..." required></textarea>
+		    </div>
+
+		    <button type="button" onclick="sendToWhatsApp()" class="btn-primary submit-btn">
+		        Request a Consultation
+		    </button>
+
+		</div>
+                
             </div>
         </div>
     </section>
@@ -1599,6 +1644,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="mailto:contact@sellerq.in">📧 contact@sellerq.in</a></li>
+                    <li><a href="tel:+917022828389">📞 +91 70228 28389</a></li>
                     <li><a href="#">📍 Serving clients across India</a></li>
                 </ul>
             </div>
@@ -1661,6 +1707,40 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+	function sendToWhatsApp(){
+ 	       const name = document.getElementById('name').value;
+        	const email = document.getElementById('email').value;
+        	const company = document.getElementById('company').value;
+        	const message = document.getElementById('message').value;
+		if(!name || !email || !message){
+		    alert("Please fill all required fields before submitting.");
+		    return;
+		}
+
+        	const text = encodeURIComponent(
+		`Hi SellerQ,
+		Name: ${name}
+		Email: ${email}
+		Company: ${company}
+		Message: ${message}`
+		);
+
+	        window.open(`https://wa.me/917022828389?text=${text}`, '_blank');
+	    }
     </script>
+
+	<a href="https://wa.me/917022828389?text=Hi%20SellerQ%2C%20I%20need%20Amazon%20help" class="mobile-cta">
+	    Get Free Consultation
+	</a>
+
+	<a href="https://wa.me/917022828389?text=Hi%20SellerQ%2C%20I%20need%20help%20with%20Amazon%20account%20management"
+	class="whatsapp-float" target="_blank">
+	    <svg width="28" height="28" fill="white" viewBox="0 0 32 32">
+	        <path d="M16 0C7 0 0 7 0 16c0 3 1 6 3 9L0 32l7-3c3 2 6 3 9 3 9 0 16-7 16-16S25 0 16 0z"/>
+	    </svg>
+	</a>
+
 </body>
+	
 </html>

@@ -421,11 +421,11 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            position: relative;
-            z-index: 1;
-        }
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
 
         .service-card {
             padding: 2.5rem;
@@ -498,6 +498,7 @@
 
         .service-list {
             list-style: none;
+	margin-top: auto;
         }
 
         .service-list li {
